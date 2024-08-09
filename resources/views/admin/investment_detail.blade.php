@@ -70,7 +70,7 @@
                                 <th scope="row">1</th>
                                 <td>${{number_format($investment->amount,2)}}</td>
                                 <td>${{number_format($investment->currentProfit,2)}}</td>
-                                <td>{{number_format($investment->roi)}}%</td>
+                                <td>{{number_format($investment->roi,2)}}%</td>
                                 <td>${{number_format($investment->profitPerReturn*$investment->numberOfReturns,2)}}</td>
                             </tr>
                             </tbody>
@@ -119,7 +119,7 @@
                                 <a href="{{route('admin.invest.complete',['id'=>$investment->id])}}"
                                    class="btn btn-success">Complete Investment</a>
                                 <a href="{{route('admin.invest.start',['id'=>$investment->id])}}"
-                                   class="btn btn-primary">Start Investment</a>
+                                   class="btn btn-primary">Return Today's Profit</a>
                                 <a href="{{route('admin.invest.cancel',['id'=>$investment->id])}}"
                                    class="btn btn-danger">Cancel</a>
                             </div>

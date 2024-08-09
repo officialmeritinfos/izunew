@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Jobs\SendInvestmentNotification;
 use App\Models\GeneralSetting;
 use App\Models\Investment;
+use App\Models\InvestmentReturn;
 use App\Models\ReturnType;
 use App\Models\User;
 use App\Notifications\InvestmentMail;
@@ -51,18 +52,51 @@ class Investments extends Controller
         $web = GeneralSetting::find(1);
 
         $investment = Investment::where('id',$id)->first();
-        
-        $type = ReturnType::where('id',$investment->returnType)->first();
-        
-        $timeReturn = strtotime($type->duration,time());
-        
-        $investment->status = 4;
-        
-        $investment->nextReturn = $timeReturn;
 
-        $investment->save();
+        $investor = User::where('id',$investment->user)->first();
 
-        return back()->with('success','Investment Started');
+        $currentReturn = $investment->currentReturn;
+        $numberOfReturn = $investment->numberOfReturns;
+
+        $currentProfit = $investment->currentProfit;
+        $profitToAdd = $investment->profitPerReturn;
+
+        $returnTypes = ReturnType::where('id',$investment->returnType)->first();
+        $returnType = $returnTypes->duration;
+
+        $dataReturns = [
+            'amount'=>$profitToAdd,
+            'investment'=>$investment->id,
+            'user'=>$investment->user
+        ];
+
+        $instantCurrentReturn = $currentReturn+1;
+        $newProfit = $currentProfit+$profitToAdd;
+
+        $dataInvestment = [
+            'currentProfit'=> $newProfit,
+            'currentReturn'=>$instantCurrentReturn,
+            'nextReturn'=>strtotime($returnType,time()),
+        ];
+
+        $update = Investment::where('id',$investment->id)->update($dataInvestment);
+        if ($update){
+
+            InvestmentReturn::create($dataReturns);
+            $dataUser = [
+                'profit'=>$investor->profit+$profitToAdd
+            ];
+
+            User::where('id',$investor->id)->update($dataUser);
+
+            $userMessage = "
+                                Your Investment with reference Id is <b>".$investment->reference."</b> has returned
+                                <b>$".$profitToAdd."</b> to your account.
+                            ";
+            $user->notify(new InvestmentMail($user,$userMessage,'Investment Return'));
+        }
+
+        return back()->with('success','Today Profit Added.');
     }
 
     public function cancel($id)
@@ -92,17 +126,13 @@ class Investments extends Controller
 
         $dateInvestment = [
             'status'=>1,
-            'currentReturn'=>$investment->numberOfReturns
         ];
 
-        $dataUser=[
-            'profit'=>$profit +$investor->profit,
-        ];
 
 
         $update = Investment::where('id',$id)->update($dateInvestment);
         if ($update) {
-            User::where('id', $investor->id)->update($dataUser);
+
             //send a mail to investor
             $userMessage = "
                 Your Investment with reference Id is <b>" . $investment->reference . "</b> has completed
@@ -112,7 +142,7 @@ class Investments extends Controller
             //SendInvestmentNotification::dispatch($investor, $userMessage, 'Investment Completion');
 
             $investor->notify(new InvestmentMail($investor, $userMessage, 'Investment Completion'));
-            
+
             $admin = User::where('is_admin', 1)->first();
             //send mail to Admin
             if (!empty($admin)) {
