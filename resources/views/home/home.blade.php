@@ -113,623 +113,876 @@
             }
         </style>
     @endpush
+@push('body')
+    <body class="envato_tk_templates-template envato_tk_templates-template-elementor_header_footer single single-envato_tk_templates postid-656 elementor-default elementor-template-full-width elementor-kit-6 elementor-page elementor-page-656">
+@endpush
+    <div data-elementor-type="wp-post" data-elementor-id="656" class="elementor elementor-656" data-elementor-settings="[]">
+        <div class="elementor-section-wrap">
 
-    <!-- page-banner start -->
-    <section class="banner overflow-hidden" style="background-image: url({{asset('home/img/mainslider3.jpg')}});">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="banner__content">
 
-                        <h1 class="title color-d_black mb-sm-10 mb-xs-5 mb-15">Welcome to
-                            <span class="title text-primary mb-sm-10 mb-xs-5 mb-15"> {{$siteName}}</span>
-                        </h1>
-
-                        <div class="description font-la mb-40 mb-lg-35 mb-sm-30 mb-xs-25">
-                            <p style="font-size:20px;">
-                                Our investment strategy is based on a lot of study and analysis, and it consistently earns our clients
-                                good returns. We take a long-term, diversified, and risk-management-focused strategy.
-                            </p>
-                        </div>
-
-                        <a href="{{route('register')}}" class="theme-btn">Let's Get Started <i class="far fa-chevron-double-right"></i></a>
+            <style>
+                .fullscreen-bg {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    overflow: hidden;
+                }
+                .fullscreen-bg__video {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: auto;
+                }
+                @media (min-aspect-ratio: 16/9) {
+                    .fullscreen-bg__video {
+                        width: 100%;
+                        height: auto;
+                    }
+                    #lo{
+                        height: 400px;
+                    }
+                }
+                @media (max-width: 767px) {
+                    .fullscreen-bg__video {
+                        width: 100%;
+                        height: 100%;
+                    }
+                    .fullscreen-bg{
+                        width: 1000px;
+                    }
+                    #loo{
+                        height: 565px;
+                    }
+                }
+                #overlay {
+                    position: absolute;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background-color: rgba(0,0,0,0.3);
+                    z-index: 1;
+                    cursor: pointer;
+                }
+            </style>
+            <section id="loo" class="ob-is-breaking-bad elementor-section elementor-top-section elementor-element elementor-element-1247697 elementor-section-height-min-height elementor-reverse-mobile elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-id="1247697" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;_ob_bbad_use_it&quot;:&quot;yes&quot;,&quot;_ob_bbad_sssic_use&quot;:&quot;no&quot;,&quot;_ob_glider_is_slider&quot;:&quot;no&quot;}">
+                <div class="elementor-background-overlay">
+                    <div id="overlay"></div>
+                    <div class="fullscreen-bg">
+                        <video autoplay muted loop playsinline class="fullscreen-bg__video">
+                            <source src="https://assets.mixkit.co/videos/preview/mixkit-business-meeting-of-company-workers-21232-large.mp4" type="video/mp4">
+                            Your browser does not support HTML5 video.
+                        </video>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-    <!-- page-banner end -->
-
-    <!-- competitive-edge start -->
-    <section class="competitive-edge overflow-hidden">
-        <div class="container">
-            <div class="row align-items-end mb-minus-30">
-                <div class="col-xxl-4 col-lg-6">
-                    <div class="competitive-edge__item d-flex align-items-center justify-content-between">
-                        <div class="left d-flex align-items-center">
-                            <div class="icon color-primary">
-                                <i class="icon-process-1"></i>
-                            </div>
-                            <h6 class="title text-capitalize color-d_black">
-                                Diversified Portfolio
-                            </h6>
-                        </div>
-
-                        <a href="{{route('register')}}" class="arrow-right">
-                            <i class="icon-arrow-right-2"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-xxl-4 col-lg-6">
-                    <div class="competitive-edge__item d-flex align-items-center justify-content-between">
-                        <div class="left d-flex align-items-center">
-                            <div class="icon color-primary">
-                                <i class="like-comment"></i>
-                            </div>
-                            <h6 class="title text-capitalize color-d_black">Daily Fixed Return</h6>
-                        </div>
-
-                        <a href="{{route('register')}}" class="arrow-right">
-                            <i class="icon-arrow-right-2"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-xxl-4 col-lg-12">
-                    <div class="competitive-edge__item d-flex competitive-edge__item-video justify-content-between flex-column">
-                        <div class="left">
-                            <h6 class="title text-capitalize color-white mb-10 mb-xs-5">Expert Management</h6>
-                            <div class="description font-la color-white">
-                                <p>
-                                    Put your money in the capable hands of our professional team.
-                                </p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- competitive-edge end -->
-
-    <!-- why-choose start -->
-    <section class="why-choose pb-xs-80 pt-xs-80 pt-sm-100 pt-md-100 pt-120 pb-100 overflow-hidden">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-6">
-                    <div class="why-choose__media-wrapper d-flex flex-column">
-                        <div class="video-play-btn">
-                            <a href="https://www.youtube.com/watch?v=1YyAzVmP9xQ" class="popup-video" data-effect="mfp-move-from-top">
-                                <i class="icon-play"></i></a>
-                        </div>
-
-                        <div class="why-choose__media">
-                            <img src="{{asset('home/img/services/why-choose-2.png')}}" alt="" class="img-fluid">
-                        </div>
-
-                        <div class="global-country text-center">
-                            <div class="number mb-5 color-white"><span class="counter">120</span>+</div>
-                            <h6 class="title color-white font-la">We are global, and  <br>in  120+ countries</h6>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-6">
-                    <div class="why-choose__content mt-lg-60 mt-md-50 mt-sm-40 mt-xs-35">
-                        <div class="why-choose__text mb-40 mb-md-35 mb-sm-30 mb-xs-30">
-                            <span class="sub-title d-block fw-500 color-primary text-uppercase mb-sm-10 mb-xs-5 mb-md-15 mb-lg-20 mb-25"><img src="assets/img/team-details/badge-line.svg" class="img-fluid mr-10" alt=""> Why choose us</span>
-                            <h2 class="title color-pd_black">
-                                Execute your trades on our award-winning platform
-                            </h2>
-                        </div>
-
-                        <div class="why-choose__item-wrapper d-grid justify-content-between">
-                            <div class="why-choose__item">
-                                <div class="icon mb-15 mb-md-10 mb-xs-5 color-primary">
-                                    <i class="icon-management"></i>
-                                </div>
-
-                                <h5 class="title color-d_black fw-500 mb-10">IT Management</h5>
-
-                                <div class="description font-la">
-                                    <p>We handle all the technical aspect of your investment, and you see the performance right in your dashboard.</p>
+                <div class="elementor-container elementor-column-gap-default" id="lo">
+                    <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-6da5c22 elementor-invisible" data-id="6da5c22" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;_ob_bbad_is_stalker&quot;:&quot;no&quot;,&quot;_ob_teleporter_use&quot;:false,&quot;_ob_column_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_column_has_pseudo&quot;:&quot;no&quot;}">
+                        <div class="elementor-widget-wrap elementor-element-populated" style="z-index: 3;">
+                            <div class="elementor-element elementor-element-aed773a ob-harakiri-inherit elementor-invisible elementor-widget elementor-widget-heading" data-id="aed773a" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_ob_harakiri_writing_mode&quot;:&quot;inherit&quot;,&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="heading.default">
+                                <div class="elementor-widget-container">
+                                    <h1 class="elementor-heading-title elementor-size-default">Global Private Equity Firm
+                                    </h1>
                                 </div>
                             </div>
-
-                            <div class="why-choose__item">
-                                <div class="icon mb-15 mb-md-10 mb-xs-5 color-primary">
-                                    <i class="icon-lawyer"></i>
-                                </div>
-
-                                <h5 class="title color-d_black fw-500 mb-10"> Consulting</h5>
-
-                                <div class="description font-la">
-                                    <p>We offer a free, no-charge investment consultancy service for you if you need it.</p>
+                            <div class="elementor-element elementor-element-aa3102d ob-harakiri-inherit elementor-invisible elementor-widget elementor-widget-heading" data-id="aa3102d" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_ob_harakiri_writing_mode&quot;:&quot;inherit&quot;,&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="heading.default">
+                                <div class="elementor-widget-container">
+                                    <h5 class="elementor-heading-title elementor-size-default">
+                                    </h5>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="faq mt-30 mt-sm-25 mt-xs-20" id="faq">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="h-faq-1">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq-1" aria-expanded="true" aria-controls="faq-1">
-                                        <span>01.</span> Сharts and advanced analytical tools
-                                    </button>
-                                </h2>
-
-                                <div id="faq-1" class="accordion-collapse collapse show" aria-labelledby="h-faq-1" data-bs-parent="#faq">
-                                    <div class="accordion-body">
-                                        <p>
-                                            Stay in the loop and see how your investment is performing, and earn daily returns
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="h-faq-2">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq-2" aria-expanded="false" aria-controls="faq-2">
-                                        <span>02.</span> Award winning platforms and apps
-                                    </button>
-                                </h2>
-
-                                <div id="faq-2" class="accordion-collapse collapse" aria-labelledby="h-faq-2" data-bs-parent="#faq">
-                                    <div class="accordion-body">
-                                        <p>
-                                            With over 5 awards and certifications from reputable industry players for consistency and excellency.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="h-faq-3">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq-3" aria-expanded="false" aria-controls="faq-3">
-                                        <span>03.</span> 24/7 Customer support in 10+ languages
-                                    </button>
-                                </h2>
-
-                                <div id="faq-3" class="accordion-collapse collapse" aria-labelledby="h-faq-3" data-bs-parent="#faq">
-                                    <div class="accordion-body">
-                                        <p>
-                                            We have an ever active support channel to help address all your challenges, and ensure that the best support
-                                            is offered whenever you need it.
-                                        </p>
+                            <div class="elementor-element elementor-element-24befb0 elementor-invisible elementor-widget elementor-widget-button" data-id="24befb0" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInDown&quot;,&quot;_ob_butterbutton_use_it&quot;:&quot;no&quot;,&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="button.default">
+                                <div class="elementor-widget-container">
+                                    <div class="elementor-button-wrapper">
+                                        <a href="{{route('login')}}" class="elementor-button-link elementor-button elementor-size-lg elementor-animation-wobble-horizontal" role="button">
+                        <span class="elementor-button-content-wrapper">
+                          <span class="elementor-button-text">Start Membership <i class="fa fa-arrow-circle-right"></i>
+                          </span>
+                        </span>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- why-choose end -->
-
-    <!-- similar-work start -->
-    <section class="similar-work services-work bg-dark_white pb-xs-80 pt-xs-80 pt-sm-100 pb-sm-100 pt-md-100 pb-md-100 pt-120 pb-120 overflow-hidden">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-sm-9">
-                    <div class="employee-friendly__content">
-                        <span class="sub-title fw-500 color-primary text-uppercase mb-sm-10 mb-xs-5 mb-15 d-block">
-                            <img src="{{asset('home/img/team-details/badge-line.svg')}}" class="img-fluid mr-10" alt=""> Sectors</span>
-                        <h2 class="title color-d_black">Stable <span>Sectors</span></h2>
-                    </div>
-                </div>
-
-                <div class="col-sm-3">
-                    <div class="slider-controls mt-sm-30">
-                        <div class="slider-arrows d-flex align-content-center justify-content-sm-end"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row mb-minus-30">
-                @foreach($services as $service)
-                    <div class="col-lg-4 col-md-6">
-                        <div class="similar-work__item mb-30 d-flex justify-content-between flex-column">
-                            <div class="top d-flex align-items-center">
-                                <div class="icon color-white text-center">
-                                    <i class="icon-groth"></i>
+                    <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-a0e8be6" data-id="a0e8be6" data-element_type="column" data-settings="{&quot;_ob_bbad_is_stalker&quot;:&quot;no&quot;,&quot;_ob_teleporter_use&quot;:false,&quot;_ob_column_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_column_has_pseudo&quot;:&quot;no&quot;}">
+                        <div class="elementor-widget-wrap elementor-element-populated" style="z-index: 3;">
+                            <div class="elementor-element elementor-element-b50c114 elementor-widget elementor-widget-elementskit-video" data-id="b50c114" data-element_type="widget" data-settings="{&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="elementskit-video.default">
+                                <div class="elementor-widget-container">
+                                    <div class="ekit-wid-con" >
+                                        <div class="video-content">
+                                            <a href="https://www.youtube.com/watch?v=wUpe03gwncE?autoplay=yes&amp;loop=no&amp;controls=no&amp;mute=no&amp;start=0&amp;end=&amp;version=3" class="ekit-video-popup ekit-video-popup-btn ekit_icon_button ">
+                                                <i class="fa fa-play">
+                                                </i>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
-
-                                <h4 class="title color-d_black">
-                                    <a href="{{route('service.details',['id'=>$service->id])}}">
-                                        {{$service->title}}
-                                    </a>
-                                </h4>
                             </div>
-
-                            <div class="bottom">
-                                <div class="media overflow-hidden">
-                                    <img src="{{asset('home/serv/'.$service->photo)}}" class="img-fluid" alt="">
+                            <div class="elementor-element elementor-element-79106ed ob-harakiri-inherit elementor-widget elementor-widget-heading" data-id="79106ed" data-element_type="widget" data-settings="{&quot;_ob_harakiri_writing_mode&quot;:&quot;inherit&quot;,&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="heading.default">
+                                <div class="elementor-widget-container">
+                                    <h6 class="elementor-heading-title elementor-size-default">Play Intro
+                                    </h6>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="ob-is-breaking-bad elementor-section elementor-top-section elementor-element elementor-element-0ef619c
+            elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                     data-id="0ef619c" data-element_type="section"
+                     data-settings="{&quot;_ob_bbad_use_it&quot;:&quot;yes&quot;,&quot;_ob_bbad_sssic_use&quot;:&quot;no&quot;,&quot;_ob_glider_is_slider&quot;:&quot;no&quot;}">
+                <div class="elementor-container elementor-column-gap-default">
+                    <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-9200aa7 elementor-invisible" data-id="9200aa7" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;bounceInUp&quot;,&quot;_ob_bbad_is_stalker&quot;:&quot;no&quot;,&quot;_ob_teleporter_use&quot;:false,&quot;_ob_column_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_column_has_pseudo&quot;:&quot;no&quot;}">
+                        <div class="elementor-widget-wrap elementor-element-populated">
+                            <div class="elementor-element elementor-element-fb0cf6d ekit-equal-height-disable elementor-widget elementor-widget-elementskit-icon-box" data-id="fb0cf6d" data-element_type="widget" data-settings="{&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="elementskit-icon-box.default">
+                                <div class="elementor-widget-container">
+                                    <div class="ekit-wid-con" >
+                                        <!-- link opening -->
+                                        <!-- end link opening -->
+                                        <div class="elementskit-infobox text-left text-left icon-lef-right-aligin elementor-animation- media  ">
+                                            <div class="elementskit-box-header elementor-animation-">
+                                                <div class="elementskit-info-box-icon  text-center">
+                                                    <i aria-hidden="true" class="elementkit-infobox-icon fa fa-user">
+                                                    </i>
+                                                </div>
+                                            </div>
+                                            <div class="box-body">
+                                                <h3 class="elementskit-info-box-title">
+                                                    Enrollment for Membership
+                                                </h3>
+                                                <p>First you need to become a member of {{$siteName}} by registering.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-03d6a41 elementor-invisible" data-id="03d6a41" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;bounceInUp&quot;,&quot;animation_delay&quot;:120,&quot;_ob_bbad_is_stalker&quot;:&quot;no&quot;,&quot;_ob_teleporter_use&quot;:false,&quot;_ob_column_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_column_has_pseudo&quot;:&quot;no&quot;}">
+                        <div class="elementor-widget-wrap elementor-element-populated">
+                            <div class="elementor-element elementor-element-19d34d5 ekit-equal-height-disable elementor-widget elementor-widget-elementskit-icon-box" data-id="19d34d5" data-element_type="widget" data-settings="{&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="elementskit-icon-box.default">
+                                <div class="elementor-widget-container">
+                                    <div class="ekit-wid-con" >
+                                        <!-- link opening -->
+                                        <!-- end link opening -->
+                                        <div class="elementskit-infobox text-left text-left icon-lef-right-aligin elementor-animation- media  ">
+                                            <div class="elementskit-box-header elementor-animation-">
+                                                <div class="elementskit-info-box-icon  text-center">
+                                                    <i aria-hidden="true" class="elementkit-infobox-icon fa fa-chart-pie">
+                                                    </i>
+                                                </div>
+                                            </div>
+                                            <div class="box-body">
+                                                <h3 class="elementskit-info-box-title">
+                                                    Select a Plan
+                                                </h3>
+                                                <p>Select any of our unique financial earning plans that best works for you.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-9ea7612 elementor-invisible" data-id="9ea7612" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;bounceInUp&quot;,&quot;animation_delay&quot;:240,&quot;_ob_bbad_is_stalker&quot;:&quot;no&quot;,&quot;_ob_teleporter_use&quot;:false,&quot;_ob_column_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_column_has_pseudo&quot;:&quot;no&quot;}">
+                        <div class="elementor-widget-wrap elementor-element-populated">
+                            <div class="elementor-element elementor-element-8b2bf52 ekit-equal-height-disable elementor-widget elementor-widget-elementskit-icon-box" data-id="8b2bf52" data-element_type="widget" data-settings="{&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="elementskit-icon-box.default">
+                                <div class="elementor-widget-container">
+                                    <div class="ekit-wid-con" >
+                                        <!-- link opening -->
+                                        <!-- end link opening -->
+                                        <div class="elementskit-infobox text-left text-left icon-lef-right-aligin elementor-animation- media  ">
+                                            <div class="elementskit-box-header elementor-animation-">
+                                                <div class="elementskit-info-box-icon  text-center">
+                                                    <i aria-hidden="true" class="elementkit-infobox-icon fa fa-money-bill">
+                                                    </i>
+                                                </div>
+                                            </div>
+                                            <div class="box-body">
+                                                <h3 class="elementskit-info-box-title">
+                                                    Earnings on Autopilot
+                                                </h3>
+                                                <p>
+                                                    Commence passive earnings and receive immediate payments upon requesting a withdrawal.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="ob-is-breaking-bad elementor-section elementor-top-section elementor-element elementor-element-9347601 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="9347601" data-element_type="section" data-settings="{&quot;_ob_bbad_use_it&quot;:&quot;yes&quot;,&quot;_ob_bbad_sssic_use&quot;:&quot;no&quot;,&quot;_ob_glider_is_slider&quot;:&quot;no&quot;}">
+                <div class="elementor-container elementor-column-gap-default">
+                    <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-f31dc5b" data-id="f31dc5b" data-element_type="column" data-settings="{&quot;_ob_bbad_is_stalker&quot;:&quot;no&quot;,&quot;_ob_teleporter_use&quot;:false,&quot;_ob_column_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_column_has_pseudo&quot;:&quot;no&quot;}">
+                        <div class="elementor-widget-wrap elementor-element-populated">
+                            <section class="ob-is-breaking-bad ob-bb-inner elementor-section elementor-inner-section elementor-element elementor-element-1f30aef elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="1f30aef" data-element_type="section" data-settings="{&quot;sticky&quot;:&quot;top&quot;,&quot;sticky_offset&quot;:125,&quot;sticky_parent&quot;:&quot;yes&quot;,&quot;_ob_bbad_use_it&quot;:&quot;yes&quot;,&quot;_ob_bbad_sssic_use&quot;:&quot;no&quot;,&quot;_ob_glider_is_slider&quot;:&quot;no&quot;,&quot;sticky_on&quot;:[&quot;desktop&quot;,&quot;tablet&quot;,&quot;mobile&quot;],&quot;sticky_effects_offset&quot;:0}">
+                                <div class="elementor-container elementor-column-gap-default">
+                                    <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-36fa657 elementor-invisible" data-id="36fa657" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;bounceInLeft&quot;,&quot;_ob_bbad_is_stalker&quot;:&quot;no&quot;,&quot;_ob_teleporter_use&quot;:false,&quot;_ob_column_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_column_has_pseudo&quot;:&quot;no&quot;}">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <div class="elementor-element elementor-element-69c20da ob-harakiri-inherit elementor-widget elementor-widget-heading" data-id="69c20da" data-element_type="widget" data-settings="{&quot;_ob_harakiri_writing_mode&quot;:&quot;inherit&quot;,&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                    <h6 class="elementor-heading-title elementor-size-default">Our Purpose
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-d056df1 ob-harakiri-inherit elementor-widget elementor-widget-heading" data-id="d056df1" data-element_type="widget" data-settings="{&quot;_ob_harakiri_writing_mode&quot;:&quot;inherit&quot;,&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                    <h2 class="elementor-heading-title elementor-size-default">
+                                                        Creating opportunities to rise is our shared objective
+                                                    </h2>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-d4fadcd elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="d4fadcd" data-element_type="widget" data-settings="{&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="divider.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="elementor-divider">
+                              <span class="elementor-divider-separator">
+                              </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                    <div class="elementor-column elementor-col-66 elementor-top-column elementor-element elementor-element-901f392" data-id="901f392" data-element_type="column" data-settings="{&quot;_ob_bbad_is_stalker&quot;:&quot;no&quot;,&quot;_ob_teleporter_use&quot;:false,&quot;_ob_column_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_column_has_pseudo&quot;:&quot;no&quot;}">
+                        <div class="elementor-widget-wrap elementor-element-populated">
+                            <section class="ob-is-breaking-bad ob-bb-inner elementor-section elementor-inner-section elementor-element elementor-element-a11363c elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="a11363c" data-element_type="section" data-settings="{&quot;_ob_bbad_use_it&quot;:&quot;yes&quot;,&quot;_ob_bbad_sssic_use&quot;:&quot;no&quot;,&quot;_ob_glider_is_slider&quot;:&quot;no&quot;}">
+                                <div class="elementor-container elementor-column-gap-default">
+                                    <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-c66821e elementor-invisible" data-id="c66821e" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;_ob_bbad_is_stalker&quot;:&quot;no&quot;,&quot;_ob_teleporter_use&quot;:false,&quot;_ob_column_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_column_has_pseudo&quot;:&quot;no&quot;}">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <div class="elementor-element elementor-element-6bb4d81 ekit-equal-height-disable elementor-widget elementor-widget-elementskit-image-box" data-id="6bb4d81" data-element_type="widget" data-settings="{&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="elementskit-image-box.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="ekit-wid-con" >
+                                                        <div class="elementskit-info-image-box ekit-image-box text-center simple-card" >
+                                                            <div class="elementskit-box-header image-box-img-center">
+                                                                <img width="1080" height="721" src="{{asset('home/static/temp/wp-content/uploads/sites/56/2021/07/at-the-meeting-with-finance-advisor.jpg')}}" class="attachment-full size-full" alt="At the meeting with finance advisor." loading="lazy" />
+                                                            </div>
+                                                            <div class="elementskit-box-body ekit-image-box-body">
+                                                                <div class="elementskit-box-content ekit-image-box-body-inner">
+                                                                    <h3 class="elementskit-info-box-title">
+                                                                        <a >Join us on an exploration.
+                                                                        </a>
+                                                                    </h3>
+                                                                    <div class="elementskit-box-style-content">
 
-                                <div class="text pt-30 pr-30 pb-30 pl-30 pt-sm-20 pt-xs-15 pr-sm-20 pr-xs-15 pb-sm-20 pb-xs-15 pl-sm-20 pl-xs-15 font-la">
-                                    <p>
-                                        {{\Illuminate\Support\Str::words($service->short,5)}}
+                                                                        Capture the chance to enhance your capital in the stock market by mirroring the trades of top-performing traders in our investment program.Investment Management
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-d948bee ekit-equal-height-disable elementor-widget elementor-widget-elementskit-image-box" data-id="d948bee" data-element_type="widget" data-settings="{&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="elementskit-image-box.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="ekit-wid-con" >
+                                                        <div class="elementskit-info-image-box ekit-image-box text-center simple-card" >
+                                                            <div class="elementskit-box-header image-box-img-center">
+                                                                <img width="1080" height="608" src="{{asset('home/static/temp/wp-content/uploads/sites/56/2021/07/finance-e1627827550977.jpg')}}" class="attachment-full size-full" alt="finance" loading="lazy" />
+                                                            </div>
+                                                            <div class="elementskit-box-body ekit-image-box-body">
+                                                                <div class="elementskit-box-content ekit-image-box-body-inner">
+                                                                    <h3 class="elementskit-info-box-title">
+                                                                        <a >Trading at High Frequencies
+                                                                        </a>
+                                                                    </h3>
+                                                                    <div class="elementskit-box-style-content">
+                                                                        Prominent hedge funds, global institutions, and industry trailblazers rely on Century21 company for trading guidance and market-making services.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-b26d3e0 elementor-invisible" data-id="b26d3e0" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;animation_delay&quot;:120,&quot;_ob_bbad_is_stalker&quot;:&quot;no&quot;,&quot;_ob_teleporter_use&quot;:false,&quot;_ob_column_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_column_has_pseudo&quot;:&quot;no&quot;}">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <div class="elementor-element elementor-element-c0e4175 ekit-equal-height-disable elementor-widget elementor-widget-elementskit-image-box" data-id="c0e4175" data-element_type="widget" data-settings="{&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="elementskit-image-box.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="ekit-wid-con" >
+                                                        <div class="elementskit-info-image-box ekit-image-box text-center simple-card" >
+                                                            <div class="elementskit-box-header image-box-img-center">
+                                                                <img width="1080" height="720" src="{{asset('home/static/temp/wp-content/uploads/sites/56/2021/07/two-busines-partners-men-in-the-office-e1627827569195.jpg')}}" class="attachment-full size-full" alt="Two busines partners men in the office" loading="lazy" />
+                                                            </div>
+                                                            <div class="elementskit-box-body ekit-image-box-body">
+                                                                <div class="elementskit-box-content ekit-image-box-body-inner">
+                                                                    <h3 class="elementskit-info-box-title">
+                                                                        <a >Managing Investments
+                                                                        </a>
+                                                                    </h3>
+                                                                    <div class="elementskit-box-style-content">
+                                                                        We provide dynamic stock investment strategies spanning public and private markets, along with tailored solutions for both institutional and individual investors.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-88fb79f ekit-equal-height-disable elementor-widget elementor-widget-elementskit-image-box" data-id="88fb79f" data-element_type="widget" data-settings="{&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="elementskit-image-box.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="ekit-wid-con" >
+                                                        <div class="elementskit-info-image-box ekit-image-box text-center simple-card" >
+                                                            <div class="elementskit-box-header image-box-img-center">
+                                                                <img width="1080" height="721" src="{{asset('home/static/temp/wp-content/uploads/sites/56/2021/07/business-e1627827590309.jpg')}}" class="attachment-full size-full" alt="Business" loading="lazy" />
+                                                            </div>
+                                                            <div class="elementskit-box-body ekit-image-box-body">
+                                                                <div class="elementskit-box-content ekit-image-box-body-inner">
+                                                                    <h3 class="elementskit-info-box-title">
+                                                                        <a >Managing Wealth
+                                                                        </a>
+                                                                    </h3>
+                                                                    <div class="elementskit-box-style-content">
+                                                                        We assist individuals, businesses, and institutions in constructing, safeguarding, and overseeing wealth, enabling them to pursue their financial aspirations.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="ob-is-breaking-bad elementor-section elementor-top-section elementor-element elementor-element-fc804ab elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="fc804ab" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;_ob_bbad_use_it&quot;:&quot;yes&quot;,&quot;_ob_bbad_sssic_use&quot;:&quot;no&quot;,&quot;_ob_glider_is_slider&quot;:&quot;no&quot;}">
+                <div class="elementor-container elementor-column-gap-default">
+                    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-75eb816" data-id="75eb816" data-element_type="column" data-settings="{&quot;_ob_bbad_is_stalker&quot;:&quot;no&quot;,&quot;_ob_teleporter_use&quot;:false,&quot;_ob_column_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_column_has_pseudo&quot;:&quot;no&quot;}">
+                        <div class="elementor-widget-wrap elementor-element-populated">
+                            <div class="elementor-element elementor-element-1823532 ob-harakiri-inherit elementor-invisible elementor-widget elementor-widget-heading" data-id="1823532" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInLeft&quot;,&quot;_ob_harakiri_writing_mode&quot;:&quot;inherit&quot;,&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="heading.default">
+                                <div class="elementor-widget-container">
+                                    <h6 class="elementor-heading-title elementor-size-default">Why Choose Us
+                                    </h6>
+                                </div>
+                            </div>
+                            <div class="elementor-element elementor-element-49b3204 ob-harakiri-inherit elementor-invisible elementor-widget elementor-widget-heading" data-id="49b3204" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInRight&quot;,&quot;_ob_harakiri_writing_mode&quot;:&quot;inherit&quot;,&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="heading.default">
+                                <div class="elementor-widget-container">
+                                    <h2 class="elementor-heading-title elementor-size-default">Investing Smartly with Intelligent Concepts
+                                    </h2>
+                                </div>
+                            </div>
+                            <div class="elementor-element elementor-element-d4268b0 elementor-widget__width-initial ob-harakiri-inherit elementor-invisible elementor-widget elementor-widget-text-editor" data-id="d4268b0" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_ob_harakiri_writing_mode&quot;:&quot;inherit&quot;,&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="text-editor.default">
+                                <div class="elementor-widget-container">
+                                    <p>{{$siteName}} have a unique approach to income generation. We build innovative wealth creation products.
                                     </p>
                                 </div>
-
-                                <a href="{{route('service.details',['id'=>$service->id])}}" class="theme-btn text-center fw-600">
-                                    Discover More <i class="fas fa-long-arrow-alt-right"></i></a>
                             </div>
-                        </div>
-                    </div>
-                @endforeach
-
-            </div>
-        </div>
-    </section>
-
-    <!-- company-skill start -->
-    <section class="company-skill company-skill-home-3 pb-xs-80 pt-xs-80 pt-sm-100 pb-sm-100 pt-md-100 pb-md-100 pt-120 pb-90 overflow-hidden">
-        <div class="container">
-            <a href="https://www.youtube.com/watch?v=1YyAzVmP9xQ" class="popup-video" data-effect="mfp-move-from-top"><i class="icon-play"></i></a>
-            <div class="row">
-                <div class="col-lg-3 col-sm-6">
-                    <div class="our-company__meida">
-                        <img src="{{asset('home/img/about/our-company-1.png')}}" alt="" class="img-fluid">
-
-                        <div class="years-experience overflow-hidden mt-20 mt-sm-10 mt-xs-10 text-center">
-                            <div class="number mb-5 color-white">
-                                <span class="counter">7</span><sup>+</sup>
-                            </div>
-
-                            <h5 class="title color-white">Years Experience</h5>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-sm-6">
-                    <div class="our-company__meida border-radius">
-                        <img src="{{asset('home/img/about/our-company-2.png')}}" alt="" class="img-fluid">
-
-                        <div class="horizental-bar"></div>
-                    </div>
-                </div>
-
-                <div class="col-lg-6">
-                    <div class="company-skill__content mt-md-50 mt-sm-45 mt-xs-40 ml-auto">
-                        <span class="sub-title d-block fw-500 color-primary text-uppercase mb-sm-10 mb-xs-5 mb-md-15 mb-20">
-                            <img src="{{asset('home/img/team-details/badge-line.svg')}}" class="img-fluid mr-10" alt="">About {{$siteName}}</span>
-                        <h2 class="title color-pd_black mb-25 mb-xs-10 mb-sm-15">Providing <span>High Quality Services</span></h2>
-
-                        <div class="description font-la">
-                            <p>
-                                {{$siteName}} provides first-rate asset management services across a wide range of industries, including
-                                real estate, gold funds, cannabis, and cryptocurrencies. We focus on fostering lasting relationships
-                                with clients and providing superior returns. You can rely on us to deliver outstanding results.
-                            </p>
-                            <p class="about-one__text-2">
-                                Throughout our existence, we've aimed to balance lower risk and higher profits for our customers through innovative analysis, information dispersion, and expert assistance. Our team includes experienced professionals with diverse and in-depth knowledge, enhancing the entire investing process.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- company-skill end -->
-
-    <!-- counter-area start -->
-    <div class="counter-area pb-xs-80 pb-sm-100 pb-md-100 pb-120 overflow-hidden">
-        <div class="container">
-            <div class="row mb-minus-30">
-                <div class="col-xl-3 col-lg-4 col-sm-6">
-                    <div class="counter-area__item d-flex align-items-center">
-                        <div class="icon color-primary">
-                            <i class="icon-process-1"></i>
-                        </div>
-
-                        <div class="text text-center">
-                            <div class="number fw-600 color-primary"><span class="counter">283</span>M+</div>
-                            <div class="description font-la">Successful Investments</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-3 col-lg-4 col-sm-6">
-                    <div class="counter-area__item d-flex align-items-center">
-                        <div class="icon color-primary">
-                            <i class="icon-support-2"></i>
-                        </div>
-
-                        <div class="text text-center">
-                            <div class="number fw-600 color-primary"><span class="counter">150</span>+</div>
-                            <div class="description font-la">Expert Staff</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-3 col-lg-4 col-sm-6">
-                    <div class="counter-area__item d-flex align-items-center">
-                        <div class="icon color-primary">
-                            <i class="icon-coffee-2"></i>
-                        </div>
-
-                        <div class="text text-center">
-                            <div class="number fw-600 color-primary"><span class="counter">20</span>K+</div>
-                            <div class="description font-la">Investors</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-3 col-lg-4 col-sm-6">
-                    <div class="counter-area__item d-flex align-items-center">
-                        <div class="icon color-primary">
-                            <i class="icon-teamwork-1"></i>
-                        </div>
-
-                        <div class="text text-center">
-                            <div class="number fw-600 color-primary"><span class="counter">95</span>%</div>
-                            <div class="description font-la">Client Satisfaction</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- counter-area end -->
-
-    <div class="pricing-area" style="margin-bottom: 5rem;margin-top: 5rem;">
-        <div class="container">
-            <div class="section-title">
-                <span class="sub-title">Our Packages</span>
-                <h2>Specialized Investment Packages</h2>
-            </div>
-            <div class="row justify-content-center">
-                @foreach($packages as $package)
-                    @inject('option','App\Defaults\Custom')
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="single-price">
-                            <div class="deal-top">
-                                <h3>{{$package->name}}</h3>
-                                <h4> {{$package->roi}}%/ <span class="sup">{{$option->getReturnType($package->returnType)}}</span> </h4>
-                                <small class="text-white">{{$package->note}}</small>
-                            </div>
-                            <div class="deal-bottom">
-                                <ul class="deal-item">
-                                    <li>
-                                        Price: ${{number_format($package->minAmount,2)}} - @if($package->isUnlimited !=1)
-                                            ${{number_format($package->maxAmount,2)}}
-                                        @else
-                                            Unlimited
-                                        @endif
-                                    </li>
-                                    <li>Profit return: {{$package->roi}}% {{$option->getReturnType($package->returnType)}}</li>
-                                    <li>Contract Duration: {{$package->Duration}}</li>
-                                    <li>Referral Bonus: {{$package->referral}}% </li>
-                                </ul>
-                                <div class="btn-area">
-                                    <a href="{{route('register')}}">Get Started</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
-
-            </div>
-        </div>
-    </div>
-
-    <!-- testimonial start -->
-    <section class="testimonial bg-dark_white pb-xs-80 pt-xs-80 pt-sm-100 pb-sm-100 pt-md-100 pb-md-100 pt-120 pb-110 overflow-hidden">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="testimonial__content mb-60 mb-md-50 mb-sm-40 mb-xs-30 text-center">
-                        <h6 class="sub-title fw-500 color-primary text-uppercase mb-sm-10 mb-xs-5 mb-15"><img src="{{asset('home/img/team-details/badge-line.svg')}}" class="img-fluid mr-10" alt=""> Testimonials</h6>
-                        <h2 class="title color-d_black">{{$siteName}} <span>Investor's Feedback</span></h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="container container_testimonial">
-            <div class="row">
-                <div class="col-12">
-                    <div class="testimonial-slider">
-                        <div class="slider-item">
-                            <div class="testimonial__item">
-                                <div class="testimonial__item-header d-flex justify-content-between align-items-center mb-35 mb-sm-25 mb-xs-20">
-                                    <div class="left d-flex align-items-center">
-                                        <div class="media overflow-hidden">
-                                            <img src="https://ui-avatars.com/api/?name=F+Juanita" class="img-fluid" alt="">
-                                        </div>
-
-                                        <div class="meta">
-                                            <h6 class="name fw-500 text-uppercase color-d_black">Florence Juanita </h6>
+                            <section class="ob-is-breaking-bad ob-bb-inner elementor-section elementor-inner-section elementor-element elementor-element-531fcf9 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="531fcf9" data-element_type="section" data-settings="{&quot;_ob_bbad_use_it&quot;:&quot;yes&quot;,&quot;_ob_bbad_sssic_use&quot;:&quot;no&quot;,&quot;_ob_glider_is_slider&quot;:&quot;no&quot;}">
+                                <div class="elementor-container elementor-column-gap-default">
+                                    <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-7b5843f elementor-invisible" data-id="7b5843f" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;bounceInDown&quot;,&quot;_ob_bbad_is_stalker&quot;:&quot;no&quot;,&quot;_ob_teleporter_use&quot;:false,&quot;_ob_column_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_column_has_pseudo&quot;:&quot;no&quot;}">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <div class="elementor-element elementor-element-41f4e8d ekit-equal-height-disable elementor-widget elementor-widget-elementskit-icon-box" data-id="41f4e8d" data-element_type="widget" data-settings="{&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="elementskit-icon-box.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="ekit-wid-con" >
+                                                        <!-- link opening -->
+                                                        <!-- end link opening -->
+                                                        <div class="elementskit-infobox text-center text- icon-top-align elementor-animation-   ">
+                                                            <div class="elementskit-box-header elementor-animation-">
+                                                                <div class="elementskit-info-box-icon  ">
+                                                                    <i aria-hidden="true" class="elementkit-infobox-icon fa fa-shield">
+                                                                    </i>
+                                                                </div>
+                                                            </div>
+                                                            <div class="box-body">
+                                                                <h3 class="elementskit-info-box-title">
+                                                                    Security & Privacy
+                                                                </h3>
+                                                                <p>We use the latest technology to protect your information and financial transactions.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-
-                                    <div class="right">
-                                        <div class="starts">
-                                            <ul>
-                                                <li><span></span></li>
-                                                <li><span></span></li>
-                                                <li><span></span></li>
-                                                <li><span></span></li>
-                                                <li><span></span></li>
-                                            </ul>
+                                    <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-07bdc47 elementor-invisible" data-id="07bdc47" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;bounceInDown&quot;,&quot;animation_delay&quot;:120,&quot;_ob_bbad_is_stalker&quot;:&quot;no&quot;,&quot;_ob_teleporter_use&quot;:false,&quot;_ob_column_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_column_has_pseudo&quot;:&quot;no&quot;}">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <div class="elementor-element elementor-element-0c6e569 ekit-equal-height-disable elementor-widget elementor-widget-elementskit-icon-box" data-id="0c6e569" data-element_type="widget" data-settings="{&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="elementskit-icon-box.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="ekit-wid-con" >
+                                                        <!-- link opening -->
+                                                        <!-- end link opening -->
+                                                        <div class="elementskit-infobox text-center text- icon-top-align elementor-animation-   ">
+                                                            <div class="elementskit-box-header elementor-animation-">
+                                                                <div class="elementskit-info-box-icon  ">
+                                                                    <i aria-hidden="true" class="elementkit-infobox-icon fa fa-pen-square">
+                                                                    </i>
+                                                                </div>
+                                                            </div>
+                                                            <div class="box-body">
+                                                                <h3 class="elementskit-info-box-title">
+                                                                    Investing Tools
+                                                                </h3>
+                                                                <p>From strategy to analysis, our tools help you keep track of your finances with ease.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-f0a037f elementor-invisible" data-id="f0a037f" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;bounceInDown&quot;,&quot;animation_delay&quot;:240,&quot;_ob_bbad_is_stalker&quot;:&quot;no&quot;,&quot;_ob_teleporter_use&quot;:false,&quot;_ob_column_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_column_has_pseudo&quot;:&quot;no&quot;}">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <div class="elementor-element elementor-element-dbb7ae4 ekit-equal-height-disable elementor-widget elementor-widget-elementskit-icon-box" data-id="dbb7ae4" data-element_type="widget" data-settings="{&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="elementskit-icon-box.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="ekit-wid-con" >
+                                                        <!-- link opening -->
+                                                        <!-- end link opening -->
+                                                        <div class="elementskit-infobox text-center text- icon-top-align elementor-animation-   ">
+                                                            <div class="elementskit-box-header elementor-animation-">
+                                                                <div class="elementskit-info-box-icon  ">
+                                                                    <i aria-hidden="true" class="elementkit-infobox-icon fa fa-lock">
+                                                                    </i>
+                                                                </div>
+                                                            </div>
+                                                            <div class="box-body">
+                                                                <h3 class="elementskit-info-box-title">
+                                                                    Asset Protection
+                                                                </h3>
+                                                                <p>We also participate in asset protection programs to further secure your funds.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-a80d290 elementor-invisible" data-id="a80d290" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;bounceInDown&quot;,&quot;animation_delay&quot;:360,&quot;_ob_bbad_is_stalker&quot;:&quot;no&quot;,&quot;_ob_teleporter_use&quot;:false,&quot;_ob_column_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_column_has_pseudo&quot;:&quot;no&quot;}">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <div class="elementor-element elementor-element-7568a00 ekit-equal-height-disable elementor-widget elementor-widget-elementskit-icon-box" data-id="7568a00" data-element_type="widget" data-settings="{&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="elementskit-icon-box.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="ekit-wid-con" >
+                                                        <!-- link opening -->
+                                                        <!-- end link opening -->
+                                                        <div class="elementskit-infobox text-center text- icon-top-align elementor-animation-   ">
+                                                            <div class="elementskit-box-header elementor-animation-">
+                                                                <div class="elementskit-info-box-icon  ">
+                                                                    <i aria-hidden="true" class="elementkit-infobox-icon fa fa-chart-bar">
+                                                                    </i>
+                                                                </div>
+                                                            </div>
+                                                            <div class="box-body">
+                                                                <h3 class="elementskit-info-box-title">
+                                                                    Investment Access
+                                                                </h3>
+                                                                <p>We are providing investors access to investments previously available to the top 1%.
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-
-                                <div class="description font-la mb-40 mb-md-35 mb-sm-30 mb-xs-25">
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="ob-is-breaking-bad elementor-section elementor-top-section elementor-element elementor-element-16d48e7 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="16d48e7" data-element_type="section" data-settings="{&quot;_ob_bbad_use_it&quot;:&quot;yes&quot;,&quot;_ob_bbad_sssic_use&quot;:&quot;no&quot;,&quot;_ob_glider_is_slider&quot;:&quot;no&quot;}">
+                <div class="elementor-container elementor-column-gap-default">
+                    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-67056c2 elementor-invisible" data-id="67056c2" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;_ob_bbad_is_stalker&quot;:&quot;no&quot;,&quot;_ob_teleporter_use&quot;:false,&quot;_ob_column_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_column_has_pseudo&quot;:&quot;no&quot;}">
+                        <div class="elementor-widget-wrap elementor-element-populated">
+                            <div class="elementor-element elementor-element-b8b01f9 ob-harakiri-inherit elementor-widget elementor-widget-heading" data-id="b8b01f9" data-element_type="widget" data-settings="{&quot;_ob_harakiri_writing_mode&quot;:&quot;inherit&quot;,&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="heading.default">
+                                <div class="elementor-widget-container">
+                                    <h6 class="elementor-heading-title elementor-size-default">Overview
+                                    </h6>
+                                </div>
+                            </div>
+                            <div class="elementor-element elementor-element-4b8e612 ob-harakiri-inherit elementor-widget elementor-widget-heading" data-id="4b8e612" data-element_type="widget" data-settings="{&quot;_ob_harakiri_writing_mode&quot;:&quot;inherit&quot;,&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="heading.default">
+                                <div class="elementor-widget-container">
+                                    <h2 class="elementor-heading-title elementor-size-default">Initiate a Solid Plan
+                                    </h2>
+                                </div>
+                            </div>
+                            <div class="elementor-element elementor-element-be19fe9 ob-harakiri-inherit elementor-widget elementor-widget-text-editor" data-id="be19fe9" data-element_type="widget" data-settings="{&quot;_ob_harakiri_writing_mode&quot;:&quot;inherit&quot;,&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="text-editor.default">
+                                <div class="elementor-widget-container">
                                     <p>
-                                        "{{$siteName}} Real Estate helped me find the perfect investment property. Their expertise and
-                                        guidance made the process smooth and stress-free. Highly recommend!"
+                                        Consider your desires, and embark on the journey to maximize them by choosing to start with us today. We are consistently available to guide you in making the optimal decisions.
+                                    </p>
+                                    <p>
+                                        Our experts excel in every aspect. They undergo thorough training in forex, cryptocurrency trading, and providing investment advice.
                                     </p>
                                 </div>
-
-                                <div class="testimonial__item-footer d-flex justify-content-between">
-
-                                    <div class="quote color-primary">
-                                        <i class="fas fa-quote-right"></i>
-                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section style="margin-top: 4rem;" class="ob-is-breaking-bad elementor-section elementor-top-section elementor-element elementor-element-16d48e7 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="16d48e7" data-element_type="section" data-settings="{&quot;_ob_bbad_use_it&quot;:&quot;yes&quot;,&quot;_ob_bbad_sssic_use&quot;:&quot;no&quot;,&quot;_ob_glider_is_slider&quot;:&quot;no&quot;}">
+                <div class="elementor-container elementor-column-gap-default">
+                    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-67056c2 elementor-invisible" data-id="67056c2" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;_ob_bbad_is_stalker&quot;:&quot;no&quot;,&quot;_ob_teleporter_use&quot;:false,&quot;_ob_column_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_column_has_pseudo&quot;:&quot;no&quot;}">
+                        <div class="elementor-widget-wrap elementor-element-populated">
+                            <div class="elementor-element elementor-element-b8b01f9 ob-harakiri-inherit elementor-widget elementor-widget-heading" data-id="b8b01f9" data-element_type="widget" data-settings="{&quot;_ob_harakiri_writing_mode&quot;:&quot;inherit&quot;,&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="heading.default">
+                                <div class="elementor-widget-container">
+                                    <h6 class="elementor-heading-title elementor-size-default">Overview
+                                    </h6>
+                                </div>
+                            </div>
+                            <div class="elementor-element elementor-element-4b8e612 ob-harakiri-inherit elementor-widget elementor-widget-heading" data-id="4b8e612" data-element_type="widget" data-settings="{&quot;_ob_harakiri_writing_mode&quot;:&quot;inherit&quot;,&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="heading.default">
+                                <div class="elementor-widget-container">
+                                    <h2 class="elementor-heading-title elementor-size-default">Buying digital Assets
+                                    </h2>
+                                </div>
+                            </div>
+                            <div class="elementor-element elementor-element-be19fe9 ob-harakiri-inherit elementor-widget elementor-widget-text-editor" data-id="be19fe9" data-element_type="widget" data-settings="{&quot;_ob_harakiri_writing_mode&quot;:&quot;inherit&quot;,&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="text-editor.default">
+                                <div class="elementor-widget-container">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/tuUO-Q4_b5c" title="YouTube video player"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="slider-item">
-                            <div class="testimonial__item border--primary">
-                                <div class="testimonial__item-header d-flex justify-content-between align-items-center mb-35 mb-sm-25 mb-xs-20">
-                                    <div class="left d-flex align-items-center">
-                                        <div class="media overflow-hidden">
-                                            <img src="https://ui-avatars.com/api/?name=Ashikul+I" class="img-fluid" alt="">
-                                        </div>
-
-                                        <div class="meta">
-                                            <h6 class="name fw-500 text-uppercase color-d_black">Ashikul Ishalm</h6>
-                                        </div>
-                                    </div>
-
-                                    <div class="right">
-                                        <div class="starts">
-                                            <ul>
-                                                <li><span></span></li>
-                                                <li><span></span></li>
-                                                <li><span></span></li>
-                                                <li><span></span></li>
-                                                <li><span></span></li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                    </div>
+                </div>
+            </section>
+            <section style="margin-top: 4rem;" class="ob-is-breaking-bad elementor-section elementor-top-section elementor-element elementor-element-16d48e7 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="16d48e7" data-element_type="section" data-settings="{&quot;_ob_bbad_use_it&quot;:&quot;yes&quot;,&quot;_ob_bbad_sssic_use&quot;:&quot;no&quot;,&quot;_ob_glider_is_slider&quot;:&quot;no&quot;}">
+                <div class="elementor-container elementor-column-gap-default">
+                    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-67056c2 elementor-invisible" data-id="67056c2" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;_ob_bbad_is_stalker&quot;:&quot;no&quot;,&quot;_ob_teleporter_use&quot;:false,&quot;_ob_column_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_column_has_pseudo&quot;:&quot;no&quot;}">
+                        <div class="elementor-widget-wrap elementor-element-populated">
+                            <div class="elementor-element elementor-element-b8b01f9 ob-harakiri-inherit elementor-widget elementor-widget-heading" data-id="b8b01f9" data-element_type="widget" data-settings="{&quot;_ob_harakiri_writing_mode&quot;:&quot;inherit&quot;,&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="heading.default">
+                                <div class="elementor-widget-container">
+                                    <h6 class="elementor-heading-title elementor-size-default">Overview
+                                    </h6>
                                 </div>
-
-                                <div class="description font-la mb-40 mb-md-35 mb-sm-30 mb-xs-25">
-                                    <p>"I was impressed by the level of professionalism and attention to detail provided by {{$siteName}} Real Estate. They truly went above and beyond to ensure my satisfaction."</p>
+                            </div>
+                            <div class="elementor-element elementor-element-4b8e612 ob-harakiri-inherit elementor-widget elementor-widget-heading" data-id="4b8e612" data-element_type="widget" data-settings="{&quot;_ob_harakiri_writing_mode&quot;:&quot;inherit&quot;,&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="heading.default">
+                                <div class="elementor-widget-container">
+                                    <h2 class="elementor-heading-title elementor-size-default">Market Rates
+                                    </h2>
                                 </div>
-
-                                <div class="testimonial__item-footer d-flex justify-content-between">
-
-
-                                    <div class="quote color-primary">
-                                        <i class="fas fa-quote-right"></i>
-                                    </div>
+                            </div>
+                            <div class="elementor-element elementor-element-be19fe9 ob-harakiri-inherit elementor-widget elementor-widget-text-editor" data-id="be19fe9" data-element_type="widget" data-settings="{&quot;_ob_harakiri_writing_mode&quot;:&quot;inherit&quot;,&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="text-editor.default">
+                                <div class="elementor-widget-container">
+                                    <script src="https://widgets.coingecko.com/gecko-coin-list-widget.js"></script>
+                                    <gecko-coin-list-widget locale="en" outlined="true" coin-ids="" initial-currency="usd"></gecko-coin-list-widget>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </section>
 
-                        <div class="slider-item">
-                            <div class="testimonial__item border-red">
-                                <div class="testimonial__item-header d-flex justify-content-between align-items-center mb-35 mb-sm-25 mb-xs-20">
-                                    <div class="left d-flex align-items-center">
-                                        <div class="media overflow-hidden">
-                                            <img src="https://ui-avatars.com/api/?name=Ashley+C" class="img-fluid" alt="">
-                                        </div>
-
-                                        <div class="meta">
-                                            <h6 class="name fw-500 text-uppercase color-d_black">Ashley Cara</h6>
-                                        </div>
+            <div class="pricing-area" style="margin-bottom: 5rem;margin-top: 5rem;">
+                <div class="container">
+                    <div class="section-title">
+                        <span class="sub-title">Our Packages</span>
+                        <h2>Specialized Investment Packages</h2>
+                    </div>
+                    <div class="row justify-content-center">
+                        @foreach($packages as $package)
+                            @inject('option','App\Defaults\Custom')
+                            <div class="col-md-4 col-sm-6 col-xs-12">
+                                <div class="single-price">
+                                    <div class="deal-top">
+                                        <h3>{{$package->name}}</h3>
+                                        <h4> {{$package->roi}}%/ <span class="sup">{{$option->getReturnType($package->returnType)}}</span> </h4>
+                                        <small class="text-white">{{$package->note}}</small>
                                     </div>
-
-                                    <div class="right">
-                                        <div class="starts">
-                                            <ul>
-                                                <li><span></span></li>
-                                                <li><span></span></li>
-                                                <li><span></span></li>
-                                                <li><span></span></li>
-                                                <li><span></span></li>
-                                            </ul>
+                                    <div class="deal-bottom">
+                                        <ul class="deal-item">
+                                            <li>
+                                                Price: ${{number_format($package->minAmount,2)}} - @if($package->isUnlimited !=1)
+                                                    ${{number_format($package->maxAmount,2)}}
+                                                @else
+                                                    Unlimited
+                                                @endif
+                                            </li>
+                                            <li>Profit return: {{$package->roi}}% {{$option->getReturnType($package->returnType)}}</li>
+                                            <li>Contract Duration: {{$package->Duration}}</li>
+                                            <li>Referral Bonus: {{$package->referral}}% </li>
+                                        </ul>
+                                        <div class="btn-area">
+                                            <a href="{{route('register')}}">Get Started</a>
                                         </div>
-                                    </div>
-                                </div>
-
-                                <div class="description font-la mb-40 mb-md-35 mb-sm-30 mb-xs-25">
-                                    <p>"I highly recommend {{$siteName}} Investment services to anyone looking to invest and earn.
-                                        Their professionalism, expertise, and personalized service are second to none."</p>
-                                </div>
-
-                                <div class="testimonial__item-footer d-flex justify-content-between">
-                                    <div class="quote color-primary">
-                                        <i class="fas fa-quote-right"></i>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="slider-item">
-                            <div class="testimonial__item border--primary">
-                                <div class="testimonial__item-header d-flex justify-content-between align-items-center mb-35 mb-sm-25 mb-xs-20">
-                                    <div class="left d-flex align-items-center">
-                                        <div class="media overflow-hidden">
-                                            <img src="https://ui-avatars.com/api/?name=Sarah+Martinez" class="img-fluid" alt="">
-                                        </div>
-
-                                        <div class="meta">
-                                            <h6 class="name fw-500 text-uppercase color-d_black">Sarah Martinez</h6>
-                                        </div>
-                                    </div>
-
-                                    <div class="right">
-                                        <div class="starts">
-                                            <ul>
-                                                <li><span></span></li>
-                                                <li><span></span></li>
-                                                <li><span></span></li>
-                                                <li><span></span></li>
-                                                <li><span></span></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="description font-la mb-40 mb-md-35 mb-sm-30 mb-xs-25">
-                                    <p>"As someone new to cryptocurrency, {{$siteName}}'s educational resources and personalized guidance helped me navigate the complexities of trading with confidence."</p>
-                                </div>
-
-                                <div class="testimonial__item-footer d-flex justify-content-between">
-
-                                    <div class="quote color-primary">
-                                        <i class="fas fa-quote-right"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
+                        @endforeach
 
                     </div>
                 </div>
             </div>
+
+
+            <section class="ob-is-breaking-bad elementor-section elementor-top-section elementor-element elementor-element-9347601 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="9347601" data-element_type="section" data-settings="{&quot;_ob_bbad_use_it&quot;:&quot;yes&quot;,&quot;_ob_bbad_sssic_use&quot;:&quot;no&quot;,&quot;_ob_glider_is_slider&quot;:&quot;no&quot;}">
+                <div class="elementor-container elementor-column-gap-default">
+                    <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-f31dc5b" data-id="f31dc5b" data-element_type="column" data-settings="{&quot;_ob_bbad_is_stalker&quot;:&quot;no&quot;,&quot;_ob_teleporter_use&quot;:false,&quot;_ob_column_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_column_has_pseudo&quot;:&quot;no&quot;}">
+                        <div class="elementor-widget-wrap elementor-element-populated">
+                            <section class="ob-is-breaking-bad ob-bb-inner elementor-section elementor-inner-section elementor-element elementor-element-1f30aef elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="1f30aef" data-element_type="section" data-settings="{&quot;sticky&quot;:&quot;top&quot;,&quot;sticky_offset&quot;:125,&quot;sticky_parent&quot;:&quot;yes&quot;,&quot;_ob_bbad_use_it&quot;:&quot;yes&quot;,&quot;_ob_bbad_sssic_use&quot;:&quot;no&quot;,&quot;_ob_glider_is_slider&quot;:&quot;no&quot;,&quot;sticky_on&quot;:[&quot;desktop&quot;,&quot;tablet&quot;,&quot;mobile&quot;],&quot;sticky_effects_offset&quot;:0}">
+                                <div class="elementor-container elementor-column-gap-default">
+                                    <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-36fa657 elementor-invisible" data-id="36fa657" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;bounceInLeft&quot;,&quot;_ob_bbad_is_stalker&quot;:&quot;no&quot;,&quot;_ob_teleporter_use&quot;:false,&quot;_ob_column_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_column_has_pseudo&quot;:&quot;no&quot;}">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <div class="elementor-element elementor-element-69c20da ob-harakiri-inherit elementor-widget elementor-widget-heading" data-id="69c20da" data-element_type="widget" data-settings="{&quot;_ob_harakiri_writing_mode&quot;:&quot;inherit&quot;,&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                    <h6 class="elementor-heading-title elementor-size-default">Top Investors
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-d056df1 ob-harakiri-inherit elementor-widget elementor-widget-heading" data-id="d056df1" data-element_type="widget" data-settings="{&quot;_ob_harakiri_writing_mode&quot;:&quot;inherit&quot;,&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                    <h2 class="elementor-heading-title elementor-size-default">
+                                                        Our Top Investors
+                                                    </h2>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-d4fadcd elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="d4fadcd" data-element_type="widget" data-settings="{&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="divider.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="elementor-divider">
+                              <span class="elementor-divider-separator">
+                              </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                    <div class="elementor-column elementor-col-66 elementor-top-column elementor-element elementor-element-901f392" data-id="901f392" data-element_type="column" data-settings="{&quot;_ob_bbad_is_stalker&quot;:&quot;no&quot;,&quot;_ob_teleporter_use&quot;:false,&quot;_ob_column_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_column_has_pseudo&quot;:&quot;no&quot;}">
+                        <div class="elementor-widget-wrap elementor-element-populated">
+                            <section class="ob-is-breaking-bad ob-bb-inner elementor-section elementor-inner-section elementor-element elementor-element-a11363c elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="a11363c" data-element_type="section" data-settings="{&quot;_ob_bbad_use_it&quot;:&quot;yes&quot;,&quot;_ob_bbad_sssic_use&quot;:&quot;no&quot;,&quot;_ob_glider_is_slider&quot;:&quot;no&quot;}">
+                                <div class="elementor-container elementor-column-gap-default">
+                                    <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-c66821e elementor-invisible" data-id="c66821e" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;_ob_bbad_is_stalker&quot;:&quot;no&quot;,&quot;_ob_teleporter_use&quot;:false,&quot;_ob_column_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_column_has_pseudo&quot;:&quot;no&quot;}">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <div class="elementor-element elementor-element-6bb4d81 ekit-equal-height-disable elementor-widget elementor-widget-elementskit-image-box" data-id="6bb4d81" data-element_type="widget" data-settings="{&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="elementskit-image-box.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="ekit-wid-con" >
+                                                        <div class="elementskit-info-image-box ekit-image-box text-center simple-card" >
+                                                            <div class="elementskit-box-header image-box-img-center">
+                                                                <img width="1080" height="721" src="{{asset('home/investors/3.jpeg')}}" class="attachment-full size-full" alt="At the meeting with finance advisor." loading="lazy" />
+                                                            </div>
+                                                            <div class="elementskit-box-body ekit-image-box-body">
+                                                                <div class="elementskit-box-content ekit-image-box-body-inner">
+                                                                    <h3 class="elementskit-info-box-title">
+                                                                        <a >
+                                                                            John Fredrick
+                                                                        </a>
+                                                                    </h3>
+                                                                    <div class="elementskit-box-style-content">
+                                                                        $136,000 invested
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-d948bee ekit-equal-height-disable elementor-widget elementor-widget-elementskit-image-box" data-id="d948bee" data-element_type="widget" data-settings="{&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="elementskit-image-box.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="ekit-wid-con" >
+                                                        <div class="elementskit-info-image-box ekit-image-box text-center simple-card" >
+                                                            <div class="elementskit-box-header image-box-img-center">
+                                                                <img width="1080" height="608" src="{{asset('home/investors/2.jpeg')}}" class="attachment-full size-full" alt="finance" loading="lazy" />
+                                                            </div>
+                                                            <div class="elementskit-box-body ekit-image-box-body">
+                                                                <div class="elementskit-box-content ekit-image-box-body-inner">
+                                                                    <h3 class="elementskit-info-box-title">
+                                                                        <a >
+                                                                            Adam Welsh
+                                                                        </a>
+                                                                    </h3>
+                                                                    <div class="elementskit-box-style-content">
+                                                                        $86,000 Invested
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-b26d3e0 elementor-invisible" data-id="b26d3e0" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;animation_delay&quot;:120,&quot;_ob_bbad_is_stalker&quot;:&quot;no&quot;,&quot;_ob_teleporter_use&quot;:false,&quot;_ob_column_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_column_has_pseudo&quot;:&quot;no&quot;}">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <div class="elementor-element elementor-element-c0e4175 ekit-equal-height-disable elementor-widget elementor-widget-elementskit-image-box" data-id="c0e4175" data-element_type="widget" data-settings="{&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="elementskit-image-box.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="ekit-wid-con" >
+                                                        <div class="elementskit-info-image-box ekit-image-box text-center simple-card" >
+                                                            <div class="elementskit-box-header image-box-img-center">
+                                                                <img width="1080" height="720" src="{{asset('home/investors/1.jpeg')}}" class="attachment-full size-full" alt="Two busines partners men in the office" loading="lazy" />
+                                                            </div>
+                                                            <div class="elementskit-box-body ekit-image-box-body">
+                                                                <div class="elementskit-box-content ekit-image-box-body-inner">
+                                                                    <h3 class="elementskit-info-box-title">
+                                                                        <a >
+                                                                            Angela
+                                                                        </a>
+                                                                    </h3>
+                                                                    <div class="elementskit-box-style-content">
+                                                                       $56,000 Invested
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="ob-is-breaking-bad elementor-section elementor-top-section elementor-element elementor-element-ff47f35 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-invisible" data-id="ff47f35" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInLeft&quot;,&quot;_ob_bbad_use_it&quot;:&quot;yes&quot;,&quot;_ob_bbad_sssic_use&quot;:&quot;no&quot;,&quot;_ob_glider_is_slider&quot;:&quot;no&quot;}">
+                <div class="elementor-background-overlay"></div>
+                <div class="elementor-container elementor-column-gap-default">
+                    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-acdc160" data-id="acdc160" data-element_type="column" data-settings="{&quot;_ob_bbad_is_stalker&quot;:&quot;no&quot;,&quot;_ob_teleporter_use&quot;:false,&quot;_ob_column_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_column_has_pseudo&quot;:&quot;no&quot;}">
+                        <div class="elementor-widget-wrap elementor-element-populated">
+                            <div class="elementor-element elementor-element-e996477 ob-harakiri-inherit ob-has-background-overlay elementor-widget elementor-widget-heading" data-id="e996477" data-element_type="widget" data-settings="{&quot;_ob_harakiri_writing_mode&quot;:&quot;inherit&quot;,&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_poopart_use&quot;:&quot;yes&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="heading.default">
+                                <div class="elementor-widget-container">
+                                    <h6 class="elementor-heading-title elementor-size-default">Testimonial</h6>
+                                </div>
+                            </div>
+                            <div class="elementor-element elementor-element-50c08e2 ob-harakiri-inherit ob-has-background-overlay elementor-widget elementor-widget-heading" data-id="50c08e2" data-element_type="widget" data-settings="{&quot;_ob_harakiri_writing_mode&quot;:&quot;inherit&quot;,&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_poopart_use&quot;:&quot;yes&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="heading.default">
+                                <div class="elementor-widget-container">
+                                    <h2 class="elementor-heading-title elementor-size-default">What Clients Say</h2>
+                                </div>
+                            </div>
+                            <div class="elementor-element elementor-element-a4fcca3 elementor-testimonial--skin-bubble elementor-testimonial--align-left elementor-testimonial--layout-image_inline elementor-arrows-yes ob-has-background-overlay elementor-widget elementor-widget-testimonial-carousel" data-id="a4fcca3" data-element_type="widget" data-settings="{&quot;slides_per_view&quot;:&quot;3&quot;,&quot;slides_to_scroll&quot;:&quot;3&quot;,&quot;slides_per_view_tablet&quot;:&quot;2&quot;,&quot;show_arrows&quot;:&quot;yes&quot;,&quot;speed&quot;:500,&quot;autoplay&quot;:&quot;yes&quot;,&quot;autoplay_speed&quot;:5000,&quot;loop&quot;:&quot;yes&quot;,&quot;pause_on_hover&quot;:&quot;yes&quot;,&quot;pause_on_interaction&quot;:&quot;yes&quot;,&quot;space_between&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:10,&quot;sizes&quot;:[]},&quot;space_between_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:10,&quot;sizes&quot;:[]},&quot;space_between_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:10,&quot;sizes&quot;:[]},&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_poopart_use&quot;:&quot;yes&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="testimonial-carousel.default">
+                                <div class="elementor-widget-container">
+                                    <div class="elementor-swiper">
+                                        <div class="elementor-main-swiper swiper-container">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <div class="elementor-testimonial">
+                                                        <div class="elementor-testimonial__content">
+                                                            <div class="elementor-testimonial__text">
+                                                                Be sure to invest with the right company always. There is no doubt about the credibility of this company. A very big Thank You to the Management.
+                                                            </div>
+                                                        </div>
+                                                        <div class="elementor-testimonial__footer">
+                                                            <div class="elementor-testimonial__image">
+                                                                <img src="{{asset('home/static/temp/wp-content/uploads/sites/56/2021/07/1.jpg')}}" alt="Fresco">
+                                                            </div>
+                                                            <cite class="elementor-testimonial__cite"><span class="elementor-testimonial__name">Fresco</span><span class="elementor-testimonial__title">Manager</span></cite>			</div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="elementor-testimonial">
+                                                        <div class="elementor-testimonial__content">
+                                                            <div class="elementor-testimonial__text">
+                                                                Amazing work! This guys also very fast for support. No matter Sunday or Monday. I get my answers and they were really patiently with my sometimes stupid questions!
+                                                            </div>
+                                                        </div>
+                                                        <div class="elementor-testimonial__footer">
+                                                            <div class="elementor-testimonial__image">
+                                                                <img src="{{asset('home/static/temp/wp-content/uploads/sites/56/2021/07/2.jpg')}}" alt="Williams">
+                                                            </div>
+                                                            <cite class="elementor-testimonial__cite"><span class="elementor-testimonial__name">Williams</span><span class="elementor-testimonial__title">Entrepreneur</span></cite>			</div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="elementor-testimonial">
+                                                        <div class="elementor-testimonial__content">
+                                                            <div class="elementor-testimonial__text">
+                                                                The ability to diversify your portfolio is a great feature. Investing into various services offered including NFTs is really awesome. I love the management.
+                                                            </div>
+                                                        </div>
+                                                        <div class="elementor-testimonial__footer">
+                                                            <div class="elementor-testimonial__image">
+                                                                <img src="{{asset('home/static/temp/wp-content/uploads/sites/56/2021/07/3.jpg')}}" alt="Samantha">
+                                                            </div>
+                                                            <cite class="elementor-testimonial__cite"><span class="elementor-testimonial__name">Samantha</span><span class="elementor-testimonial__title">Business woman</span></cite>			</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-swiper-button elementor-swiper-button-prev">
+                                                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                                                <span class="elementor-screen-only">Previous</span>
+                                            </div>
+                                            <div class="elementor-swiper-button elementor-swiper-button-next">
+                                                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                                <span class="elementor-screen-only">Next</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="ob-is-breaking-bad elementor-section elementor-top-section elementor-element elementor-element-8dfcbe5 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="8dfcbe5" data-element_type="section" data-settings="{&quot;_ob_bbad_use_it&quot;:&quot;yes&quot;,&quot;_ob_bbad_sssic_use&quot;:&quot;no&quot;,&quot;_ob_glider_is_slider&quot;:&quot;no&quot;}">
+                <div class="elementor-container elementor-column-gap-default">
+                    <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-ec4556f elementor-invisible" data-id="ec4556f" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;fadeInLeft&quot;,&quot;_ob_bbad_is_stalker&quot;:&quot;no&quot;,&quot;_ob_teleporter_use&quot;:false,&quot;_ob_column_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_column_has_pseudo&quot;:&quot;no&quot;}">
+                        <div class="elementor-widget-wrap elementor-element-populated">
+                            <div class="elementor-element elementor-element-9a3d93f ob-harakiri-inherit elementor-widget elementor-widget-heading" data-id="9a3d93f" data-element_type="widget" data-settings="{&quot;_ob_harakiri_writing_mode&quot;:&quot;inherit&quot;,&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="heading.default">
+                                <div class="elementor-widget-container">
+                                    <h6 class="elementor-heading-title elementor-size-default">
+                                    </h6>
+                                </div>
+                            </div>
+                            <div class="elementor-element elementor-element-9c5569d ob-harakiri-inherit elementor-widget elementor-widget-heading" data-id="9c5569d" data-element_type="widget" data-settings="{&quot;_ob_harakiri_writing_mode&quot;:&quot;inherit&quot;,&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="heading.default">
+                                <div class="elementor-widget-container">
+                                    <h2 class="elementor-heading-title elementor-size-default">Allow Us to Serve You.
+                                    </h2>
+                                </div>
+                            </div>
+                            <div class="elementor-element elementor-element-39d5047 ob-harakiri-inherit elementor-widget elementor-widget-text-editor" data-id="39d5047" data-element_type="widget" data-settings="{&quot;_ob_harakiri_writing_mode&quot;:&quot;inherit&quot;,&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="text-editor.default">
+                                <div class="elementor-widget-container">
+                                    <p>We assist individuals, businesses, and institutions in constructing, safeguarding, and overseeing wealth, empowering them to pursue their financial goals.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="elementor-element elementor-element-b9baec3 elementor-widget elementor-widget-button" data-id="b9baec3" data-element_type="widget" data-settings="{&quot;_ob_butterbutton_use_it&quot;:&quot;no&quot;,&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="button.default">
+                                <div class="elementor-widget-container">
+                                    <div class="elementor-button-wrapper">
+                                        <a href="{{route('register')}}" class="elementor-button-link elementor-button elementor-size-md" role="button">
+                        <span class="elementor-button-content-wrapper">
+                          <span class="elementor-button-text">Start Membership <i class="fa fa-arrow-circle-right"></i>
+                          </span>
+                        </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-b3148c6" data-id="b3148c6" data-element_type="column" data-settings="{&quot;_ob_bbad_is_stalker&quot;:&quot;no&quot;,&quot;_ob_teleporter_use&quot;:false,&quot;_ob_column_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_column_has_pseudo&quot;:&quot;no&quot;}">
+                        <div class="elementor-widget-wrap elementor-element-populated">
+                            <div class="elementor-element elementor-element-424e4a9 elementor-invisible elementor-widget elementor-widget-image" data-id="424e4a9" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_ob_photomorph_use&quot;:&quot;no&quot;,&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="image.default">
+                                <div class="elementor-widget-container">
+                                    <img width="1600" height="1024" src="{{asset('home/static/temp/wp-content/uploads/sites/56/2021/08/investment.jpg')}}" class="attachment-full size-full" alt="" loading="lazy" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
-    </section>
-    <!-- testimonial end -->
-
-
-    <!-- blog-news start -->
-    <section class="blog-news pb-xs-80 pt-xs-80 pt-sm-100 pb-sm-100 pt-md-100 pb-md-100 pt-120 pb-120 overflow-hidden" style="background-image: url({{asset('home/img/home-3/blog-new-bg.png')}});">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-9">
-                    <div class="blog-news__content">
-                        <span class="sub-title fw-500 color-primary text-uppercase mb-sm-10 mb-xs-5 mb-15 d-block"><img src="{{asset('home/img/team-details/badge-line.svg')}}" class="img-fluid mr-10" alt=""> Blog & News</span>
-                        <h2 class="title color-d_black">{{$siteName}} Latest <span>Blog & News</span></h2>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="blog-news__bottom mt-65 mt-sm-50 mt-xs-40">
-                <div class="row mb-minus-30">
-
-                    <div class="col-xl-12 col-md-12 col-12">
-                        <div class="blog-item mb-30">
-                            <rssapp-wall id="38kEBNRCi1vuK60z"></rssapp-wall>
-                            <script src="https://widget.rss.app/v1/wall.js" type="text/javascript" async></script>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- blog-news end -->
-
+    </div>
 
 @endsection
