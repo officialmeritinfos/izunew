@@ -188,7 +188,7 @@
                         <div class="elementor-widget-wrap elementor-element-populated" style="z-index: 3;">
                             <div class="elementor-element elementor-element-aed773a ob-harakiri-inherit elementor-invisible elementor-widget elementor-widget-heading" data-id="aed773a" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_ob_harakiri_writing_mode&quot;:&quot;inherit&quot;,&quot;_ob_perspektive_use&quot;:&quot;no&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;}" data-widget_type="heading.default">
                                 <div class="elementor-widget-container">
-                                    <h1 class="elementor-heading-title elementor-size-default">Global Private Equity Firm
+                                    <h1 class="elementor-heading-title elementor-size-default">{{config('app.name')}}
                                     </h1>
                                 </div>
                             </div>
