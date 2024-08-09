@@ -726,7 +726,12 @@
                                 </div>
                             </div>
                         @endforeach
-
+                        <div class="mt-2">
+                            <p style="font-weight: bold; font-size: 16px;">
+                                Note: Investors are able to withdraw both capital and profit after every 7 business days invested with
+                                {{$siteName}} (NB: This is for all the investment packages)
+                                <br></p>
+                        </div>
                     </div>
                 </div>
             </div>
