@@ -49,7 +49,7 @@
                                             <span class="badge bg-danger">Cancelled</span>
                                             @break
                                         @default
-                                            <span class="badge bg-dark">Partial Payment</span>
+                                            <span class="badge bg-dark">Payment Submitted</span>
                                             @break
                                     @endswitch
                                 </li>
@@ -66,6 +66,7 @@
                                 <th scope="col">Amount</th>
                                 <th scope="col">Asset</th>
                                 <th scope="col">Address</th>
+                                <th scope="col">Payment Proof</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -75,6 +76,9 @@
                                     <td>${{number_format($deposit->amount,2)}}</td>
                                     <td>{{$deposit->asset}}</td>
                                     <td>{{$deposit->details}}</td>
+                                    <td>
+                                        <img src="{{asset('uploads/'.$deposit->paymentProof)}}" style="width: 200px;" />
+                                    </td>
                                 </tr>
                             </tbody>
 
@@ -99,6 +103,9 @@
                                 </p>
                             @endif
                             <button class="btn btn-primary copy" data-clipboard-target="#address">Copy</button>
+                            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#paymentProof">
+                                I have paid
+                            </button>
                         </div>
                     </div>
                     <hr>
@@ -114,4 +121,34 @@
         </div>
     </div>
 
+    <!-- Modal -->
+    <div class="modal fade" id="paymentProof" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Submit Payment Proof</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="row g-3" action="{{route('deposit.proof')}}" method="post" enctype="multipart/form-data">
+                        @csrf
+                        <div class="col-md-12">
+                            <label for="inputEmail4" class="form-label">Payment Proof</label>
+                            <div class="input-group mb-3">
+                                <label class="input-group-text" for="inputGroupFile01">Upload</label>
+                                <input type="file" class="form-control" id="inputGroupFile01" name="photo" accept="image/*">
+                            </div>
+                        </div>
+                        <div class="col-md-12" style="display: none;">
+                            <label for="inputEmail4" class="form-label">Deposit ID</label>
+                            <input type="text" value="{{$deposit->reference}}" name="deposit" class="form-control" id="inputEmail4">
+                        </div>
+                        <div class="col-12 text-center">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection

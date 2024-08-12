@@ -35,6 +35,7 @@ Route::get('dashboard/promo/{id}/enroll',[Dashboard::class,'enrollInPromo'])->na
 Route::get('deposits',[Deposits::class,'landingPage'])->name('deposit.index');
 Route::get('new_deposit',[Deposits::class,'newDeposit'])->name('new_deposit');
 Route::post('process_deposit',[Deposits::class,'processDeposit'])->name('deposit.new');
+Route::post('process_deposit_proof',[Deposits::class,'processDepositProof'])->name('deposit.proof');
 Route::get('deposits/{id}/details',[Deposits::class,'depositDetails'])->name('deposit_detail');
 Route::get('deposits/{id}/cancel',[Deposits::class,'cancel'])->name('deposit.cancel');
 /*================ INVESTMENT ROUTE ====================*/

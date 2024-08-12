@@ -13,7 +13,9 @@ use App\Models\User;
 use App\Notifications\InvestmentMail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\Rule;
 
 class Deposits extends Controller
 {
@@ -193,6 +195,55 @@ class Deposits extends Controller
             }
         }
         return back()->with('error','Something went wrong');
+    }
+
+    public function processDepositProof(Request $request)
+    {
+        $web = GeneralSetting::where('id',1)->first();
+        $user = Auth::user();
+        $validator = Validator::make($request->all(),[
+            'photo'=>['required','image','max:3000'],
+            'deposit'=>['required','string',Rule::exists('deposits','reference')->where('user',$user->id)]
+        ]);
+
+        if ($validator->fails()){
+            return back()->with('errors',$validator->errors());
+        }
+        try {
+            $input = $validator->validated();
+
+            //check if amount is more than minimum deposit
+            $deposit = Deposit::where([
+                'user' => $user->id,
+                'reference' => $input['deposit']
+            ])->firstOrFail();
+
+            $fileName = time().'.'.$request->photo->extension();
+            $request->photo->move(public_path('uploads'), $fileName);
+
+            $dataDeposit=[
+                'status'=>4,'paymentProof'=>$fileName
+            ];
+            $update = Deposit::where('id',$deposit->id)->update($dataDeposit);
+            if ($update){
+                //check if admin exists
+                $admin = User::where('is_admin',1)->first();
+                //send mail to Admin
+                if (!empty($admin)){
+                    $adminMessage = "
+                   The payment proof for the deposit by ".$user->name." has been received. Please attend to this soonest
+                   and approve the deposit
+                ";
+                    //SendDepositNotification::dispatch($admin,$adminMessage,'New Pending Deposit');
+                    $admin->notify(new InvestmentMail($admin,$adminMessage,'Deposit Payment Proof Received'));
+                }
+                return back()->with('success','Payment Proof successfully received.');
+            }
+            return back()->with('error','Something went wrong');
+        }catch (\Exception $exception){
+            Log::info('Error uploading payment proof'.$exception->getMessage());
+            return back()->with('error','Something went wrong');
+        }
     }
 
 }

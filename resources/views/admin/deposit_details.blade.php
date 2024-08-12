@@ -56,7 +56,7 @@
                                         <span class="badge badge-danger">Cancelled</span>
                                         @break
                                         @default
-                                        <span class="badge badge-dark">Partial Payment</span>
+                                        <span class="badge badge-dark"> Payment Submitted</span>
                                         @break
                                     @endswitch
                                 </li>
@@ -73,6 +73,7 @@
                                 <th scope="col">Amount</th>
                                 <th scope="col">Asset</th>
                                 <th scope="col">Address</th>
+                                <th scope="col">Payment Proof</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -82,6 +83,9 @@
                                 <td>${{number_format($deposit->amount,2)}}</td>
                                 <td>{{$deposit->asset}}</td>
                                 <td>{{$deposit->details}}</td>
+                                <td>
+                                    <img src="{{asset('uploads/'.$deposit->paymentProof)}}" style="width: 200px;" />
+                                </td>
                             </tr>
                             </tbody>
 

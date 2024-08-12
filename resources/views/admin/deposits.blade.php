@@ -44,7 +44,7 @@
                                     <span class="badge badge-danger">Cancelled</span>
                                     @break
                                     @default
-                                    <span class="badge badge-dark">Partial Payment</span>
+                                    <span class="badge badge-dark">Payment Submitted</span>
                                     @break
                                 @endswitch
                             </td>
