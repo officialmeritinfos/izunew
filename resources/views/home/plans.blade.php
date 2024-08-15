@@ -260,20 +260,24 @@
                                         <div class="deal-top">
                                             <h3>{{$package->name}}</h3>
                                             <h4> {{$package->roi}}%/ <span class="sup">{{$option->getReturnType($package->returnType)}}</span> </h4>
-                                            <small class="text-white">{{$package->note}}</small>
                                         </div>
                                         <div class="deal-bottom">
                                             <ul class="deal-item">
                                                 <li>
-                                                    Price: ${{number_format($package->minAmount,2)}} - @if($package->isUnlimited !=1)
+                                                    Minimum: ${{number_format($package->minAmount,2)}}
+                                                </li>
+                                                <li>
+                                                    Maximum: @if($package->isUnlimited !=1)
                                                         ${{number_format($package->maxAmount,2)}}
                                                     @else
                                                         Unlimited
                                                     @endif
                                                 </li>
-                                                <li>Profit return: {{$package->roi}}% {{$option->getReturnType($package->returnType)}}</li>
-                                                <li>Contract Duration: {{$package->Duration}}</li>
+                                                <li>{{$package->note}}</li>
+                                                <li>Duration: {{$package->Duration}}</li>
+                                                <li>Investment Security</li>
                                                 <li>Referral Bonus: {{$package->referral}}% </li>
+                                                <li>24/7 Customer Support</li>
                                             </ul>
                                             <div class="btn-area">
                                                 <a href="{{route('register')}}">Get Started</a>
@@ -282,6 +286,12 @@
                                     </div>
                                 </div>
                             @endforeach
+                                <div class="mt-2">
+                                    <p style="font-weight: bold; font-size: 16px;">
+                                        Note: Investors are able to withdraw both capital and profit after every 7 business days invested with
+                                        {{$siteName}} (NB: This is for all the investment packages)
+                                        <br></p>
+                                </div>
 
                         </div>
                     </div>
